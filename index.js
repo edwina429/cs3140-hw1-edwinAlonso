@@ -80,10 +80,12 @@ const student = {
 
   getAverage: function() {
     // TODO: Return average of this.grades
+    return average(this.grades)
   },
 
   isHonorRoll: function() {
     // TODO: Return true if average > 85
+    return average(this.grades) > 85;
   }
 };
 
@@ -100,8 +102,8 @@ console.log("capitalize('hello'):", capitalize("hello"));
 console.log("reverse('hello'):", reverse("hello"));
 console.log("countVowels('hello'):", countVowels("hello"));
 
-// console.log("\n=== Part 3: Object ===");
-// console.log("Student:", student.name);
-// console.log("Grades:", student.grades);
-// console.log("Average:", student.getAverage());
-// console.log("Honor Roll:", student.isHonorRoll());
+console.log("\n=== Part 3: Object ===");
+console.log("Student:", student.name);
+console.log("Grades:", student.grades);
+console.log("Average:", student.getAverage());
+console.log("Honor Roll:", student.isHonorRoll());
