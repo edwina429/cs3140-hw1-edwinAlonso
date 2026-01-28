@@ -50,11 +50,26 @@ function reverse(str) {
   // TODO: Return the string reversed
   // "hello" -> "olleh"
   // Hint: str.split("").reverse().join("")
+  return str.split("").reverse().join("")
+
 }
 
 function countVowels(str) {
   // TODO: Return count of vowels (a, e, i, o, u)
   // "hello" -> 2
+  str = str.toLowerCase();
+  let count = 0;
+  for(let i = 0 ; i < str.length; i++){
+    if(
+      str[i] ===  'a' ||
+      str[i] ===  'e' ||
+      str[i] ===  'i' ||
+      str[i] ===  'o' ||
+      str[i] ===  'u' 
+    )
+    count += 1;
+  }
+  return count;
 }
 
 // ============ PART 3: OBJECT ============
@@ -80,10 +95,10 @@ console.log("Average:", average(numbers));
 console.log("Min:", min(numbers));
 console.log("Max:", max(numbers));
 
-// console.log("\n=== Part 2: Strings ===");
-// console.log("capitalize('hello'):", capitalize("hello"));
-// console.log("reverse('hello'):", reverse("hello"));
-// console.log("countVowels('hello'):", countVowels("hello"));
+console.log("\n=== Part 2: Strings ===");
+console.log("capitalize('hello'):", capitalize("hello"));
+console.log("reverse('hello'):", reverse("hello"));
+console.log("countVowels('hello'):", countVowels("hello"));
 
 // console.log("\n=== Part 3: Object ===");
 // console.log("Student:", student.name);
