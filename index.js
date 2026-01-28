@@ -8,26 +8,42 @@ const numbers = [10, 5, 8, 12, 3, 7, 15, 2, 9, 6];
 function sum(arr) {
   // TODO: Return the sum of all numbers
   // Hint: Use a for loop or arr.reduce()
+  let arrSum = 0;
+  for(let i = 0 ; i < arr.length; i++)
+    arrSum += arr[i];
+  return arrSum;
 }
 
 function average(arr) {
   // TODO: Return the average
   // Hint: Use your sum function!
+  let arrSum = sum(arr);
+  return arrSum / arr.length;
 }
 
 function min(arr) {
   // TODO: Return the smallest number
   // Hint: Use Math.min(...arr)
+//   const min = arr.
+//   return 
+  return arr.reduce((a,b) =>  Math.min(a,b));
 }
 
 function max(arr) {
   // TODO: Return the largest number
+  return arr.reduce((a,b) =>  Math.max(a,b));
 }
 
 // ============ PART 2: STRING FUNCTIONS ============
 function capitalize(str) {
   // TODO: Return string with first letter capitalized
   // "hello" -> "Hello"
+  let upper = "";
+  upper += str[0].toUpperCase();
+  for(let i = 1 ; i < str.length; i++){
+    upper += str[i];
+  }
+  return upper;
 }
 
 function reverse(str) {
@@ -46,11 +62,11 @@ const student = {
   name: "Your Name",
   age: 20,
   grades: [85, 92, 78, 90, 88],
-  
+
   getAverage: function() {
     // TODO: Return average of this.grades
   },
-  
+
   isHonorRoll: function() {
     // TODO: Return true if average > 85
   }
@@ -64,13 +80,13 @@ console.log("Average:", average(numbers));
 console.log("Min:", min(numbers));
 console.log("Max:", max(numbers));
 
-console.log("\n=== Part 2: Strings ===");
-console.log("capitalize('hello'):", capitalize("hello"));
-console.log("reverse('hello'):", reverse("hello"));
-console.log("countVowels('hello'):", countVowels("hello"));
+// console.log("\n=== Part 2: Strings ===");
+// console.log("capitalize('hello'):", capitalize("hello"));
+// console.log("reverse('hello'):", reverse("hello"));
+// console.log("countVowels('hello'):", countVowels("hello"));
 
-console.log("\n=== Part 3: Object ===");
-console.log("Student:", student.name);
-console.log("Grades:", student.grades);
-console.log("Average:", student.getAverage());
-console.log("Honor Roll:", student.isHonorRoll());
+// console.log("\n=== Part 3: Object ===");
+// console.log("Student:", student.name);
+// console.log("Grades:", student.grades);
+// console.log("Average:", student.getAverage());
+// console.log("Honor Roll:", student.isHonorRoll());
