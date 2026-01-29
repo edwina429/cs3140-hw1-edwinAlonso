@@ -1,5 +1,5 @@
 // Homework 1: JavaScript Fundamentals
-// Name: YOUR NAME HERE
+// Name: Edwin Alonso
 // Date: 1/28/2026
 
 // ============ PART 1: ARRAY FUNCTIONS ============
@@ -24,8 +24,7 @@ function average(arr) {
 function min(arr) {
   // TODO: Return the smallest number
   // Hint: Use Math.min(...arr)
-//   const min = arr.
-//   return 
+  // is this correct?
   return arr.reduce((a,b) =>  Math.min(a,b));
 }
 
@@ -44,31 +43,27 @@ function capitalize(str) {
     upper += str[i];
   }
   return upper;
+  // i prefer your example/way of doing it in the hints you provided 
 }
 
 function reverse(str) {
   // TODO: Return the string reversed
   // "hello" -> "olleh"
   // Hint: str.split("").reverse().join("")
-  return str.split("").reverse().join("")
 
+  return str.split("").reverse().join("")
 }
 
 function countVowels(str) {
   // TODO: Return count of vowels (a, e, i, o, u)
   // "hello" -> 2
-  str = str.toLowerCase();
+  str = str.toLowerCase()
+  let vowels = "aeiou"
   let count = 0;
-  for(let i = 0 ; i < str.length; i++){
-    if(
-      str[i] ===  'a' ||
-      str[i] ===  'e' ||
-      str[i] ===  'i' ||
-      str[i] ===  'o' ||
-      str[i] ===  'u' 
-    )
-    count += 1;
-  }
+  for(let i = 0 ; i < str.length ; i++)
+    if(vowels.includes(str[i]))
+      count++;
+
   return count;
 }
 
